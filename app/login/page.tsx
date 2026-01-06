@@ -13,7 +13,7 @@ export default function LoginPage() {
   const login = async () => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      router.push("/Admin");
+      router.push("/admin");
     } catch (err: unknown) {
       // FIXED: Proper type checking for unknown error
       if (err instanceof Error) {
@@ -27,7 +27,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="flex h-screen items-center justify-center">
+    <body className="flex h-screen items-center justify-center">
       <div className="p-6 bg-white shadow rounded w-80">
         <h2 className="text-xl mb-4">Admin Login</h2>
 
@@ -50,6 +50,6 @@ export default function LoginPage() {
           Login
         </button>
       </div>
-    </div>
+    </body>
   );
 }
