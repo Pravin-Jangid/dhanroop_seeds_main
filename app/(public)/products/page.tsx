@@ -60,7 +60,7 @@ export default function ProductsPage() {
               <div
                 key={product.id}
                 className={`
-                  grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 items-center
+                  grid grid-cols-1 border-b-2 border-gray-600 lg:grid-cols-2 gap-2 items-center
                   animate-fadeIn
                   ${isReverse ? "lg:flex-row-reverse" : ""}
                 `}
@@ -74,17 +74,10 @@ export default function ProductsPage() {
                 >
                   <div className="relative w-full max-w-md mx-auto group">
                     {/* Decorative elements */}
-                    <div className="absolute -inset-4 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 rounded-2xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
-                    {/* Category badge - premium positioning */}
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
-                      <span className="inline-block px-4 py-1.5 text-xs font-medium rounded-full bg-white text-primary border border-primary/30 shadow-sm backdrop-blur-sm">
-                        {product.category}
-                      </span>
-                    </div>
+                    {/* <div className="absolute -inset-4 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 rounded-2xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div> */}
 
                     {/* Main Product Image */}
-                    <div className="relative transform transition-transform duration-300 group-hover:scale-[1.02]">
+                    <div className="relative transform transition-transform duration-300 group-hover:scale-[1.12]">
                       <Image
                         src={product.imageUrl}
                         alt={product.name}
@@ -100,12 +93,12 @@ export default function ProductsPage() {
                 {/* ================= DETAILS SECTION ================= */}
                 <div
                   className={`
-                    space-y-6 p-6 md:p-8
+                    space-y-6 p-2 md:p-4
                     ${isReverse ? "lg:order-1" : "lg:order-2"}
                   `}
                 >
                   {/* Product Header with premium spacing */}
-                  <div className="space-y-3 border-b border-gray-100 pb-4">
+                  <div className="space-y-3 border-b border-gray-100 pb-1">
                     <h2 className="font-heading text-2xl md:text-3xl font-bold text-dark leading-tight tracking-tight">
                       {product.name}
                     </h2>
@@ -117,7 +110,7 @@ export default function ProductsPage() {
 
                   {/* Specifications Grid - Premium Design */}
                   <div className="space-y-5">
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-2 gap-2">
                       {/* Specification Item Template */}
                       {[
                         { icon: "🌱", label: "मौसम", value: product.mausam },
@@ -127,7 +120,7 @@ export default function ProductsPage() {
                       ].map((spec, i) => (
                         <div
                           key={i}
-                          className="group relative overflow-hidden rounded-xl border border-gray-200 bg-white p-4 transition-all duration-200 hover:border-primary/30 hover:shadow-sm"
+                          className="group relative overflow-hidden rounded-xl border border-gray-200 bg-white p-2 transition-all duration-200 hover:border-primary/30 hover:shadow-sm"
                         >
                           <div className="flex items-start space-x-3">
                             <div className="text-xl text-primary transform transition-transform duration-200 group-hover:scale-110">
@@ -143,7 +136,7 @@ export default function ProductsPage() {
                             </div>
                           </div>
                           {/* Subtle accent */}
-                          <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                          {/* <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div> */}
                         </div>
                       ))}
                     </div>

@@ -35,7 +35,7 @@ const translations = {
     },
     footer: {
       description:
-        "धनरूप नेचुरल सीड्स प्राइवेट लिमिटेड एक प्रमुख कृषि उत्पाद कंपनी है जो हमारे खाद्य स्रोतों की खेती, सुरक्षा और निरंतरता में क्रांति लाने के लिए समर्पित है।",
+        "धनरूप  सीड्स प्राइवेट लिमिटेड एक प्रमुख कृषि उत्पाद कंपनी है जो हमारे खाद्य स्रोतों की खेती, सुरक्षा और निरंतरता में क्रांति लाने के लिए समर्पित है।",
       followUs: "हमें फॉलो करें",
       quickLinks: "त्वरित लिंक",
       contactUs: "संपर्क करें",
@@ -244,7 +244,7 @@ const translations = {
     },
     footer: {
       description:
-        "धनरूप नैसर्गिक बियाणे प्रायव्हेट लिमिटेड ही एक अग्रगण्य कृषी उत्पादन कंपनी आहे जी आपल्या अन्न स्रोतांची लागवड, संरक्षण आणि टिकवून ठेवण्याच्या पद्धतीत क्रांती घडवून आणण्यासाठी समर्पित आहे.",
+        "धनरूप  सीड्स प्रायव्हेट लिमिटेड ही एक अग्रगण्य कृषी उत्पादन कंपनी आहे जी आपल्या अन्न स्रोतांची लागवड, संरक्षण आणि टिकवून ठेवण्याच्या पद्धतीत क्रांती घडवून आणण्यासाठी समर्पित आहे.",
       followUs: "आम्हाला फॉलो करा",
       quickLinks: "द्रुत दुवे",
       contactUs: "संपर्क साधा",
@@ -453,7 +453,7 @@ const translations = {
     },
     footer: {
       description:
-        "Dhanroop Natural Seeds Pvt Ltd is a leading agricultural product company dedicated to revolutionizing the way we cultivate, protect, and sustain our food sources.",
+        "Dhanroop  Seeds Pvt Ltd is a leading agricultural product company dedicated to revolutionizing the way we cultivate, protect, and sustain our food sources.",
       followUs: "Follow Us",
       quickLinks: "Quick Links",
       contactUs: "Contact Us",

@@ -38,8 +38,7 @@ export default function Footer() {
       name: "Instagram",
       icon: Instagram,
       url: "https://www.instagram.com/dhanroopseeds?igsh=MXBrbHJ1djczb2lwaQ==",
-      color:
-        "hover:bg-gradient-to-br from-purple-500 via-pink-500 to-yellow-500",
+      color: "hover:bg-gradient-to-br from-red-500 via-pink-500 to-yellow-500",
     },
     {
       name: "Facebook",
@@ -60,7 +59,6 @@ export default function Footer() {
     { name: t("menu.products"), href: "/products" },
     { name: t("menu.about"), href: "/about" },
     { name: t("menu.contact"), href: "/contact" },
-    { name: t("menu.blogs"), href: "/tips" },
   ];
 
   return (
@@ -79,13 +77,13 @@ export default function Footer() {
                 className="max-h-[50px] object-contain transition-transform duration-300 hover:scale-105"
               />
             </div>
-            <p className="font-body text-muted leading-relaxed text-sm mb-2">
+            <p className="font-body text-white leading-relaxed text-sm mb-2">
               {t("footer.description")}
             </p>
 
             {/* Social Media */}
             <div>
-              <h4 className="font-heading font-semibold text-dark mb-2">
+              <h4 className="font-heading font-semibold text-white mb-2">
                 {t("footer.followUs")}
               </h4>
               <div className="flex gap-2">
@@ -97,10 +95,10 @@ export default function Footer() {
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`p-2 rounded-lg bg-white shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 ${social.color}`}
+                      className={`p-2 rounded-lg  shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 ${social.color}`}
                       aria-label={`${t("footer.followUs")} ${social.name}`}
                     >
-                      <Icon className="w-4 h-4 text-primary" />
+                      <Icon className="w-4 h-4 text-white" />
                     </a>
                   );
                 })}
@@ -110,7 +108,7 @@ export default function Footer() {
 
           {/* Column 2: Quick Links */}
           <div className="lg:col-span-1">
-            <h4 className="font-heading font-semibold text-dark mb-3">
+            <h4 className="font-heading font-semibold text-white mb-3">
               {t("footer.quickLinks")}
             </h4>
             <ul className="space-y-1.5">
@@ -120,8 +118,8 @@ export default function Footer() {
                     href={link.href}
                     className="group/link flex items-center gap-2 py-1.5 px-2 rounded hover:bg-white/80 transition-all duration-200"
                   >
-                    <ChevronRight className="w-3 h-3 text-primary opacity-60 group-hover/link:opacity-100 group-hover/link:translate-x-0.5 transition-all" />
-                    <span className="text-dark group-hover/link:text-primary group-hover/link:font-medium">
+                    <ChevronRight className="w-3 h-3 text-white opacity-60 group-hover/link:opacity-100 group-hover/link:translate-x-0.5 transition-all" />
+                    <span className="text-white group-hover/link:text-white group-hover/link:font-medium">
                       {link.name}
                     </span>
                   </Link>
@@ -132,28 +130,28 @@ export default function Footer() {
 
           {/* Column 3: Contact Info */}
           <div className="lg:col-span-1">
-            <h4 className="font-heading font-semibold text-dark mb-3">
+            <h4 className="font-heading font-semibold text-white mb-3">
               {t("footer.contactUs")}
             </h4>
             <div className="space-y-3">
               <div className="flex items-start gap-2">
                 <div className="p-1.5 rounded-md bg-primary/10 mt-0.5">
-                  <Phone className="w-4 h-4 text-primary" />
+                  <Phone className="w-4 h-4 text-white" />
                 </div>
                 <div>
-                  <h5 className="font-medium text-dark mb-1">
+                  <h5 className="font-medium text-white mb-1">
                     {t("footer.callUs")}
                   </h5>
                   <div className="space-y-0.5">
                     <a
                       href="tel:+917020186411"
-                      className="block text-muted hover:text-primary transition-colors"
+                      className="block text-white hover:text-white transition-colors"
                     >
                       +91 70201 86411
                     </a>
                     <a
                       href="tel:+917020182831"
-                      className="block text-muted hover:text-primary transition-colors"
+                      className="block text-white hover:text-white transition-colors"
                     >
                       +91 70201 82831
                     </a>
@@ -163,15 +161,15 @@ export default function Footer() {
 
               <div className="flex items-start gap-2">
                 <div className="p-1.5 rounded-md bg-primary/10 mt-0.5">
-                  <Mail className="w-4 h-4 text-primary" />
+                  <Mail className="w-4 h-4 text-white" />
                 </div>
                 <div>
-                  <h5 className="font-medium text-dark mb-1">
+                  <h5 className="font-medium text-white mb-1">
                     {t("footer.email")}
                   </h5>
                   <a
                     href="mailto:dhanroopseed@gmail.com"
-                    className="block text-muted hover:text-primary transition-colors"
+                    className="block text-white hover:text-white transition-colors"
                   >
                     dhanroopseed@gmail.com
                   </a>
@@ -180,13 +178,13 @@ export default function Footer() {
 
               <div className="flex items-start gap-2">
                 <div className="p-1.5 rounded-md bg-primary/10 mt-0.5">
-                  <Mail className="w-4 h-4 text-primary" />
+                  <Mail className="w-4 h-4 text-white" />
                 </div>
                 <div>
-                  <h5 className="font-medium text-dark mb-1">
+                  <h5 className="font-medium text-white mb-1">
                     {t("footer.business")}
                   </h5>
-                  <p className="text-muted">info@dhanroop.com</p>
+                  <p className="text-white">info@dhanroop.com</p>
                 </div>
               </div>
             </div>
@@ -194,18 +192,18 @@ export default function Footer() {
 
           {/* Column 4: Address */}
           <div className="lg:col-span-1">
-            <h4 className="font-heading font-semibold text-dark mb-3">
+            <h4 className="font-heading font-semibold text-white mb-3">
               {t("footer.ourLocation")}
             </h4>
             <div className="flex items-start gap-2">
               <div className="p-1.5 rounded-md bg-primary/10 mt-0.5">
-                <MapPin className="w-4 h-4 text-primary" />
+                <MapPin className="w-4 h-4 text-white" />
               </div>
               <div>
-                <h5 className="font-medium text-dark mb-1">
+                <h5 className="font-medium text-white mb-1">
                   {t("footer.headOffice")}
                 </h5>
-                <address className="text-muted not-italic leading-relaxed">
+                <address className="text-white not-italic leading-relaxed">
                   {t("footer.addressLine1")}
                   <br />
                   {t("footer.addressLine2")}
@@ -218,7 +216,7 @@ export default function Footer() {
                   <br />
                   {t("footer.addressLine6")}
                   <br />
-                  <span className="font-semibold text-primary">
+                  <span className="font-semibold text-white">
                     {t("footer.addressLine7")}
                   </span>
                 </address>
@@ -231,14 +229,14 @@ export default function Footer() {
 
         <div className="pt-4 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-center md:text-left">
-            <p className="text-muted">
+            <p className="text-white">
               © {currentYear} {t("footer.copyright")}
             </p>
           </div>
 
           <div className="flex items-center gap-2">
-            <Leaf className="w-4 h-4 text-primary" />
-            <span className="font-medium text-primary">
+            <Leaf className="w-4 h-4 text-white" />
+            <span className="font-medium text-white">
               {t("footer.qualityTagline")}
             </span>
           </div>
@@ -246,19 +244,19 @@ export default function Footer() {
           <div className="flex items-center gap-4">
             <Link
               href="/privacy"
-              className="text-muted hover:text-primary transition-colors"
+              className="text-white hover:text-white transition-colors"
             >
               {t("footer.privacyPolicy")}
             </Link>
             <Link
               href="/terms"
-              className="text-muted hover:text-primary transition-colors"
+              className="text-white hover:text-white transition-colors"
             >
               {t("footer.termsOfService")}
             </Link>
             <Link
               href="/sitemap"
-              className="text-muted hover:text-primary transition-colors"
+              className="text-white hover:text-white transition-colors"
             >
               {t("footer.sitemap")}
             </Link>
@@ -266,7 +264,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-4 pt-4 border-t border-green-100/50 text-center">
-          <p className="text-muted font-medium">{t("footer.committedTo")}</p>
+          <p className="text-white font-medium">{t("footer.committedTo")}</p>
         </div>
       </div>
     </footer>

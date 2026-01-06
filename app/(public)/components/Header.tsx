@@ -76,7 +76,7 @@ export default function Header() {
   className="
     group relative inline-block
     font-semibold
-    text-[#14532d]
+    text-text-white
     hover:text-white
     transition-colors duration-300
   "

@@ -91,19 +91,6 @@ export default function Products() {
                       : "opacity-0 translate-y-6 pointer-events-none")
                   }
                 >
-                  <ul className="space-y-2 text-sm text-green-900">
-                    {(
-                      t(
-                        `products.${product.key}.details`
-                      ) as unknown as string[]
-                    ).map((detail, index) => (
-                      <li key={index} className="flex items-start gap-2">
-                        <span className="text-green-600">✔</span>
-                        <span>{detail}</span>
-                      </li>
-                    ))}
-                  </ul>
-
                   {/* WHATSAPP BUTTON */}
                   <a
                     href={`https://wa.me/917020186411?text=${encodeURIComponent(
