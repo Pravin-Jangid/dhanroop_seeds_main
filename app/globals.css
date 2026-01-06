@@ -1,0 +1,257 @@
+/* ======================================================================
+   DHANROOP – AGRI BRAND DESIGN SYSTEM
+   Brand: Green + Red (Agriculture / Quality Products)
+   Fonts: Poppins (Headings) + Inter (Body)
+   ====================================================================== */
+
+/* ----------------------------------------------------------------------
+   GOOGLE FONTS
+   ---------------------------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Cause:wght@100..900&family=Fuzzy+Bubbles:wght@400;700&display=swap");
+
+/* ----------------------------------------------------------------------
+   TAILWIND BASE IMPORT
+   ---------------------------------------------------------------------- */
+@import "tailwindcss";
+
+/* ----------------------------------------------------------------------
+   ROOT VARIABLES — SEMANTIC TOKENS
+   ---------------------------------------------------------------------- */
+:root {
+  /* ===============================
+     BRAND COLORS (FROM LOGO)
+     =============================== */
+  --brand-primary-green: #0b8f3a; /* Main outer oval */
+  --brand-secondary-green: #1fa64b; /* Inner highlight */
+  --brand-light-green: #9acd32; /* Crop / field tone */
+  --brand-bg-skin: rgb(97, 169, 63); /* Light green background */
+
+  --brand-red: #e53935; /* Dhanroop text */
+  --brand-red-dark: #c62828;
+
+  /* ===============================
+     NEUTRALS
+     =============================== */
+  --neutral-900: #1a1a1a;
+  --neutral-700: #3f3f3f;
+  --neutral-500: #6b7280;
+  --neutral-300: #e5e7eb;
+  --neutral-200: #f3f4f6;
+  --neutral-100: #f8fafc;
+  --neutral-0: #ffffff;
+
+  /* ===============================
+     TYPOGRAPHY
+     =============================== */
+  --font-body: "Inter", system-ui, sans-serif; /* Body / Quality is Identity */
+  --font-heading: "Poppins", system-ui, sans-serif; /* Headings / Dhanroop */
+}
+
+/* ----------------------------------------------------------------------
+   BASE
+   ---------------------------------------------------------------------- */
+body {
+  font-family: var(--font-body);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--neutral-700);
+  background-color: var(--neutral-100);
+}
+
+/* ----------------------------------------------------------------------
+   BACKGROUNDS
+   ---------------------------------------------------------------------- */
+.bg-page {
+  background: var(--neutral-100);
+}
+.bg-card {
+  background: var(--neutral-0);
+}
+
+.bg-primary {
+  background: linear-gradient(
+    135deg,
+    var(--brand-primary-green),
+    var(--brand-secondary-green)
+  );
+}
+
+.bg-skin {
+  background-color: var(--brand-bg-skin);
+}
+
+.bg-accent {
+  background-color: var(--brand-red);
+}
+.bg-soft-green {
+  background-color: #ecf7f0;
+}
+
+/* ----------------------------------------------------------------------
+   TEXT COLORS
+   ---------------------------------------------------------------------- */
+.text-primary {
+  color: var(--brand-primary-green);
+}
+.text-secondary {
+  color: var(--brand-secondary-green);
+}
+.text-accent {
+  color: var(--brand-red);
+}
+.text-muted {
+  color: var(--neutral-500);
+}
+.text-dark {
+  color: var(--neutral-900);
+}
+.text-white {
+  color: var(--neutral-0);
+}
+
+/* ----------------------------------------------------------------------
+   FONTS
+   ---------------------------------------------------------------------- */
+.font-heading {
+  font-family: var(--font-heading);
+}
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* ----------------------------------------------------------------------
+   HEADINGS
+   ---------------------------------------------------------------------- */
+.heading-xl {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.heading-lg {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.heading-md {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* ----------------------------------------------------------------------
+   PARAGRAPHS
+   ---------------------------------------------------------------------- */
+.text-base {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.text-small {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ----------------------------------------------------------------------
+   BUTTON SYSTEM (LOGO MATCHED)
+   ---------------------------------------------------------------------- */
+.btn {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 28px;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: none;
+}
+
+/* ===============================
+   BUTTON STATES – INVERT ON HOVER
+   =============================== */
+
+/* Primary – Green CTA */
+.btn-primary {
+  background: linear-gradient(
+    135deg,
+    var(--brand-primary-green),
+    var(--brand-secondary-green)
+  );
+  color: var(--neutral-0);
+  border: 2px solid transparent;
+  transition: all 0.25s ease;
+}
+
+.btn-primary:hover {
+  background: var(--neutral-0);
+  color: var(--brand-primary-green);
+  border: 2px solid var(--brand-primary-green);
+  transform: translateY(-1px);
+}
+
+/* Accent – Red (Important actions) */
+.btn-accent {
+  background-color: transparent;
+  color: var(--neutral-0);
+  border: 2px solid var(--neutral-0);
+
+  transition: all 0.25s ease;
+}
+
+.btn-accent:hover {
+  background-color: var(--neutral-0);
+  color: var(--brand-red);
+  border: 2px solid var(--neutral-0);
+}
+
+/* Outline – Green */
+.btn-outline {
+  background-color: transparent;
+  color: var(--brand-primary-green);
+  border: 2px solid var(--brand-primary-green);
+  transition: all 0.25s ease;
+}
+
+.btn-outline:hover {
+  background: var(--neutral-0);
+  color: var(--brand-primary-green);
+  border-color: var(--brand-primary-green);
+}
+
+/* ----------------------------------------------------------------------
+   LABELS
+   ---------------------------------------------------------------------- */
+.label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: var(--brand-primary-green);
+}
+
+/* ----------------------------------------------------------------------
+   SCROLLBAR
+   ---------------------------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--brand-primary-green);
+  border-radius: 10px;
+}
+
+/* Add these animations to your global CSS file */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
+}
