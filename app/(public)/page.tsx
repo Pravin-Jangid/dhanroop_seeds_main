@@ -1,3 +1,5 @@
+// app/(public)/page.tsx
+
 import AboutSection from "./components/AboutSection";
 import AchievementsSection from "./components/AchievementsSection";
 import Hero from "./components/Hero";

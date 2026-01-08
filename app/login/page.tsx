@@ -13,7 +13,7 @@ export default function LoginPage() {
   const login = async () => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      router.push("/admin");
+      router.push("/Admin");
     } catch (err: unknown) {
       // FIXED: Proper type checking for unknown error
       if (err instanceof Error) {

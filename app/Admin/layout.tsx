@@ -1,3 +1,5 @@
+// app/Admin/layout.tsx
+
 export default function AdminLayout({
   children,
 }: {

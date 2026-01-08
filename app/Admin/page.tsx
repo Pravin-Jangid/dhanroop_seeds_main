@@ -1,3 +1,5 @@
+// app/Admin/page.tsx
+
 "use client";
 
 import { auth } from "@/app/firebase";
