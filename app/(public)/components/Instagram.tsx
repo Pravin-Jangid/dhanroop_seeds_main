@@ -13,13 +13,15 @@ const INSTAGRAM_POSTS = [
 /* ================= MOUNT GUARD ================= */
 function useMounted() {
   const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   return mounted;
 }
 
 export default function InstagramSection() {
   const mounted = useMounted();
-  const { lang } = useLanguage(); // 🔥 re-render trigger
+  const { lang } = useLanguage(); // re-render on language change
 
   /* ================= LOAD INSTAGRAM SCRIPT ================= */
   useEffect(() => {
@@ -31,13 +33,18 @@ export default function InstagramSection() {
       script.src = "https://www.instagram.com/embed.js";
       script.async = true;
       document.body.appendChild(script);
+
+      script.onload = () => {
+        // @ts-ignore
+        window.instgrm?.Embeds.process();
+      };
     } else {
       // @ts-ignore
       window.instgrm?.Embeds.process();
     }
-  }, [mounted]);
+  }, [mounted, lang]); // lang added intentionally
 
-  /* 🔥 HYDRATION FIX */
+  /* ================= HYDRATION FIX ================= */
   if (!mounted) return null;
 
   return (
@@ -71,14 +78,13 @@ export default function InstagramSection() {
             >
               {/* CROPPED VIEWPORT */}
               <div className="w-full h-full overflow-hidden">
-                {/* SCALED EMBED */}
+                {/* SCALED EMBED (CLICKABLE) */}
                 <div
                   style={{
                     transform: "scale(0.78)",
                     transformOrigin: "top center",
                     width: "128%",
                     marginLeft: "-14%",
-                    pointerEvents: "none",
                   }}
                 >
                   <blockquote
